@@ -131,12 +131,12 @@ tun0 exists
 
 🔁 Step 2 – Start Forwarding
 Most Common Use Case (VPN Pivot)
-./router.sh start --in eth0 --out tun0
+./forward.sh start --in eth0 --out tun0
 
 
 OR bridge mode:
 
-./router.sh start --in eth0 --out tun0 --bridge
+./forward.sh start --in eth0 --out tun0 --bridge
 
 
 ⚠ Direction Rule:
@@ -173,28 +173,28 @@ http://<target-ip>
 
 🎯 Usage Examples
 🔥 Normal VPN Pivot
-./router.sh start --in eth0 --out tun0
+./forward.sh start --in eth0 --out tun0
 
 🌉 Bridge Mode
-./router.sh start --in eth0 --out tun0 --bridge
+./forward.sh start --in eth0 --out tun0 --bridge
 
 🎯 Forward Specific Port
-./router.sh start --in eth0 --out tun0 --port 80 --proto tcp
+./forward.sh start --in eth0 --out tun0 --port 80 --proto tcp
 
 🌐 Forward One Interface To All
-./router.sh start --forward-all-from eth0
+./forward.sh start --forward-all-from eth0
 
 🔄 Forward All To One
-./router.sh start --forward-all-to tun0
+./forward.sh start --forward-all-to tun0
 
 🔥 Full Mesh Mode (Lab Only)
-./router.sh start --mesh
+./forward.sh start --mesh
 
 📡 Enable Broadcast
-./router.sh start --in eth0 --out tun0 --broadcast
+./forward.sh start --in eth0 --out tun0 --broadcast
 
 🧹 Stop & Clean Everything
-./router.sh stop
+./forward.sh stop
 
 
 Then remove Windows route:
